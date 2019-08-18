@@ -1,4 +1,5 @@
 export type ArtistType = {
+  __typename?: 'Artist',
   id: string
   name: string
   bio: string
@@ -10,6 +11,7 @@ export type ArtistType = {
 }
 
 export type ArtworkType = {
+  __typename?: 'Artwork',
   id: string
   imageUrl: string
   title: string
@@ -17,6 +19,7 @@ export type ArtworkType = {
 }
 
 export type MeType = {
+  __typename?: 'Me',
   id: string,
   name: string,
   email: string,
@@ -27,6 +30,7 @@ export type MeType = {
 
 export type GetPopularArtistsType = {
   popular_artists: {
+    __typename?: 'PopularArtists',
     artists: Array<ArtistType>
   }
 }

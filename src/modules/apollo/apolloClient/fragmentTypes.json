@@ -1,0 +1,486 @@
+{
+  "__schema": {
+    "types": [
+      {
+        "kind": "INTERFACE",
+        "name": "Node",
+        "possibleTypes": [
+          {
+            "name": "Article"
+          },
+          {
+            "name": "Artwork"
+          },
+          {
+            "name": "Artist"
+          },
+          {
+            "name": "AuctionResult"
+          },
+          {
+            "name": "Show"
+          },
+          {
+            "name": "Partner"
+          },
+          {
+            "name": "PartnerShow"
+          },
+          {
+            "name": "FilterArtworks"
+          },
+          {
+            "name": "ArtworkFilterTag"
+          },
+          {
+            "name": "ArtworkFilterGene"
+          },
+          {
+            "name": "Sale"
+          },
+          {
+            "name": "Gene"
+          },
+          {
+            "name": "ArtworkContextAuction"
+          },
+          {
+            "name": "ArtworkContextPartnerShow"
+          },
+          {
+            "name": "ArtworkContextSale"
+          },
+          {
+            "name": "HighlightedShow"
+          },
+          {
+            "name": "HighlightedArticle"
+          },
+          {
+            "name": "Collection"
+          },
+          {
+            "name": "HomePageArtistModule"
+          },
+          {
+            "name": "HomePageArtworkModule"
+          },
+          {
+            "name": "HomePageModuleContextGene"
+          },
+          {
+            "name": "HomePageModuleContextSale"
+          },
+          {
+            "name": "Me"
+          },
+          {
+            "name": "Conversation"
+          },
+          {
+            "name": "Message"
+          },
+          {
+            "name": "Invoice"
+          },
+          {
+            "name": "FollowedArtistsArtworksGroup"
+          },
+          {
+            "name": "NotificationsFeedItem"
+          },
+          {
+            "name": "ArtistItem"
+          },
+          {
+            "name": "ArtworkItem"
+          },
+          {
+            "name": "GeneItem"
+          },
+          {
+            "name": "Tag"
+          },
+          {
+            "name": "SearchableItem"
+          }
+        ]
+      },
+      {
+        "kind": "INTERFACE",
+        "name": "Searchable",
+        "possibleTypes": [
+          {
+            "name": "Artwork"
+          },
+          {
+            "name": "Artist"
+          },
+          {
+            "name": "ArtistItem"
+          },
+          {
+            "name": "ArtworkItem"
+          },
+          {
+            "name": "SearchableItem"
+          }
+        ]
+      },
+      {
+        "kind": "INTERFACE",
+        "name": "Sellable",
+        "possibleTypes": [
+          {
+            "name": "Artwork"
+          },
+          {
+            "name": "EditionSet"
+          },
+          {
+            "name": "ArtworkItem"
+          }
+        ]
+      },
+      {
+        "kind": "UNION",
+        "name": "UnderlyingCurrentEvent",
+        "possibleTypes": [
+          {
+            "name": "Show"
+          },
+          {
+            "name": "Sale"
+          }
+        ]
+      },
+      {
+        "kind": "UNION",
+        "name": "OpeningHoursUnion",
+        "possibleTypes": [
+          {
+            "name": "OpeningHoursArray"
+          },
+          {
+            "name": "OpeningHoursText"
+          }
+        ]
+      },
+      {
+        "kind": "UNION",
+        "name": "AnalyticsGroupedStatsUnion",
+        "possibleTypes": [
+          {
+            "name": "AnalyticsVisitorsByCountry"
+          },
+          {
+            "name": "AnalyticsVisitorsByDevice"
+          },
+          {
+            "name": "AnalyticsVisitorsByLandingPage"
+          },
+          {
+            "name": "AnalyticsVisitorsByReferral"
+          }
+        ]
+      },
+      {
+        "kind": "UNION",
+        "name": "AnalyticsRankedStatsUnion",
+        "possibleTypes": [
+          {
+            "name": "AnalyticsArtist"
+          },
+          {
+            "name": "AnalyticsArtwork"
+          },
+          {
+            "name": "AnalyticsShow"
+          }
+        ]
+      },
+      {
+        "kind": "UNION",
+        "name": "AnalyticsRankedEntityUnion",
+        "possibleTypes": [
+          {
+            "name": "Artwork"
+          },
+          {
+            "name": "Show"
+          },
+          {
+            "name": "Artist"
+          }
+        ]
+      },
+      {
+        "kind": "UNION",
+        "name": "ArtworkFilterFacet",
+        "possibleTypes": [
+          {
+            "name": "ArtworkFilterTag"
+          },
+          {
+            "name": "ArtworkFilterGene"
+          }
+        ]
+      },
+      {
+        "kind": "UNION",
+        "name": "PartnerTypes",
+        "possibleTypes": [
+          {
+            "name": "Partner"
+          },
+          {
+            "name": "ExternalPartner"
+          }
+        ]
+      },
+      {
+        "kind": "UNION",
+        "name": "ArtworkContext",
+        "possibleTypes": [
+          {
+            "name": "ArtworkContextAuction"
+          },
+          {
+            "name": "ArtworkContextFair"
+          },
+          {
+            "name": "ArtworkContextPartnerShow"
+          },
+          {
+            "name": "ArtworkContextSale"
+          }
+        ]
+      },
+      {
+        "kind": "INTERFACE",
+        "name": "ArtworkContextGrid",
+        "possibleTypes": [
+          {
+            "name": "ArtistArtworkGrid"
+          },
+          {
+            "name": "AuctionArtworkGrid"
+          },
+          {
+            "name": "PartnerArtworkGrid"
+          },
+          {
+            "name": "RelatedArtworkGrid"
+          },
+          {
+            "name": "ShowArtworkGrid"
+          }
+        ]
+      },
+      {
+        "kind": "UNION",
+        "name": "ListPrice",
+        "possibleTypes": [
+          {
+            "name": "PriceRange"
+          },
+          {
+            "name": "ExactPrice"
+          }
+        ]
+      },
+      {
+        "kind": "UNION",
+        "name": "Highlighted",
+        "possibleTypes": [
+          {
+            "name": "HighlightedShow"
+          },
+          {
+            "name": "HighlightedArticle"
+          }
+        ]
+      },
+      {
+        "kind": "UNION",
+        "name": "HomePageModuleContext",
+        "possibleTypes": [
+          {
+            "name": "HomePageModuleContextFair"
+          },
+          {
+            "name": "HomePageModuleContextFollowArtists"
+          },
+          {
+            "name": "HomePageModuleContextFollowedArtist"
+          },
+          {
+            "name": "HomePageModuleContextGene"
+          },
+          {
+            "name": "HomePageModuleContextRelatedArtist"
+          },
+          {
+            "name": "HomePageModuleContextSale"
+          },
+          {
+            "name": "HomePageModuleContextTrending"
+          }
+        ]
+      },
+      {
+        "kind": "UNION",
+        "name": "ConversationItemType",
+        "possibleTypes": [
+          {
+            "name": "Artwork"
+          },
+          {
+            "name": "Show"
+          }
+        ]
+      },
+      {
+        "kind": "UNION",
+        "name": "Item",
+        "possibleTypes": [
+          {
+            "name": "ArtistItem"
+          },
+          {
+            "name": "ArtworkItem"
+          },
+          {
+            "name": "FeaturedLinkItem"
+          },
+          {
+            "name": "GeneItem"
+          }
+        ]
+      },
+      {
+        "kind": "INTERFACE",
+        "name": "Order",
+        "possibleTypes": [
+          {
+            "name": "BuyOrder"
+          },
+          {
+            "name": "OfferOrder"
+          }
+        ]
+      },
+      {
+        "kind": "UNION",
+        "name": "RequestedFulfillment",
+        "possibleTypes": [
+          {
+            "name": "Ship"
+          },
+          {
+            "name": "Pickup"
+          }
+        ]
+      },
+      {
+        "kind": "UNION",
+        "name": "OrderParty",
+        "possibleTypes": [
+          {
+            "name": "Partner"
+          },
+          {
+            "name": "User"
+          }
+        ]
+      },
+      {
+        "kind": "INTERFACE",
+        "name": "CommerceOrder",
+        "possibleTypes": [
+          {
+            "name": "CommerceBuyOrder"
+          },
+          {
+            "name": "CommerceOfferOrder"
+          }
+        ]
+      },
+      {
+        "kind": "UNION",
+        "name": "CommerceOrderPartyUnion",
+        "possibleTypes": [
+          {
+            "name": "CommercePartner"
+          },
+          {
+            "name": "CommerceUser"
+          }
+        ]
+      },
+      {
+        "kind": "UNION",
+        "name": "CommerceRequestedFulfillmentUnion",
+        "possibleTypes": [
+          {
+            "name": "CommercePickup"
+          },
+          {
+            "name": "CommerceShip"
+          }
+        ]
+      },
+      {
+        "kind": "UNION",
+        "name": "CreditCardMutationType",
+        "possibleTypes": [
+          {
+            "name": "CreditCardMutationSuccess"
+          },
+          {
+            "name": "CreditCardMutationFailure"
+          }
+        ]
+      },
+      {
+        "kind": "UNION",
+        "name": "SendFeedbackMutationType",
+        "possibleTypes": [
+          {
+            "name": "SendFeedbackMutationSuccess"
+          },
+          {
+            "name": "SendFeedbackMutationFailure"
+          }
+        ]
+      },
+      {
+        "kind": "UNION",
+        "name": "OrderOrFailureUnionType",
+        "possibleTypes": [
+          {
+            "name": "OrderWithMutationSuccess"
+          },
+          {
+            "name": "OrderWithMutationFailure"
+          }
+        ]
+      },
+      {
+        "kind": "UNION",
+        "name": "CommerceOrderOrFailureUnion",
+        "possibleTypes": [
+          {
+            "name": "CommerceOrderRequiresAction"
+          },
+          {
+            "name": "CommerceOrderWithMutationFailure"
+          },
+          {
+            "name": "CommerceOrderWithMutationSuccess"
+          }
+        ]
+      }
+    ]
+  }
+}

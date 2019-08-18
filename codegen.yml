@@ -13,3 +13,7 @@ generates:
         enumValues: keep 
       
       withHooks: true
+
+  ./fragmentTypes.json:
+    plugins:
+      - "fragment-matcher"
