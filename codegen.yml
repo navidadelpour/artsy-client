@@ -1,6 +1,7 @@
 overwrite: true
 schema: "https://metaphysics-production.artsy.net"
-documents: "src/**/*.tsx"
+# documents: "src/**/*.tsx"
+# documents: "./src/modules/apollo/queries/test.tsx"
 generates:
   src/generated/graphql.tsx:
     plugins:
@@ -8,4 +9,7 @@ generates:
       - "typescript-operations"
       - "typescript-react-apollo"
     config:
+      namingConvention:
+        enumValues: keep 
+      
       withHooks: true

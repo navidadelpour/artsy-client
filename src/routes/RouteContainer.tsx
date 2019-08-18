@@ -7,8 +7,8 @@ import Artist from 'pages/Artist';
 const RoutesContainer = () => {
   return (
     <BrowserRouter>
-      <Route exact path={routes.index} component={HomePage}/>
-      <Route exact path={routes.artist} component={Artist}/>
+      <Route exact path={routes.index} component={HomePage as any}/>
+      <Route exact path={routes.artist} component={Artist as any}/>
     </BrowserRouter>
   )
 }

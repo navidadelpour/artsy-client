@@ -6,6 +6,7 @@ fragment artistMain on Artist {
   bio
   imageUrl
   id
+  is_followed
 }
 `
 

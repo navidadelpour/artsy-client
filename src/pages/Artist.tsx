@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import CustomAppBar from 'components/CustomAppBar';
-import {ArtistType} from 'types'
+import {ArtistType, GetArtistType, GetArtistVars} from 'types'
 import {match} from 'react-router-dom'
 import { useQuery } from '@apollo/react-hooks';
 import GET_ARTIST from 'modules/apollo/queries/getArtist';
@@ -34,7 +34,7 @@ export type Props = {
 
 export default function Artist (props: Props) {
   const classes = useStyles()
-  const {loading, error, data} = useQuery(
+  const {loading, error, data} = useQuery<GetArtistType, GetArtistVars>(
     GET_ARTIST, {
       variables: {
         artworks_size: 6,
@@ -46,6 +46,7 @@ export default function Artist (props: Props) {
   if(loading) return <Loading/>
   if(error) return <p>{error.message}</p>
 
+  if(data)
   return (
     <Fragment>
       <CustomAppBar/>
