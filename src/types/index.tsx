@@ -63,3 +63,21 @@ export type GetFollowArtistVars = {
   unfollow: boolean,
   clientMutationId: string,
 }
+
+export type GetSearch = {
+  search: {
+    edges: Array<{
+      node: Searchable
+    }>
+  }
+}
+
+export type GetSearchVars = {
+  query: string
+}
+
+export type Searchable = {
+  displayLabel: string
+  imageUrl: string
+  href: string
+}

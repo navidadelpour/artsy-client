@@ -44,17 +44,16 @@ export default function HomePage () {
         size: num + 3
       },
       updateQuery: (prev, {fetchMoreResult}) => {
-        console.log({prev, fetchMoreResult})
         if(!fetchMoreResult) return prev
         setNum(num + 3)
         return {
           ...prev,
           popular_artists: {
             ...prev.popular_artists,
-            artists: {
+            artists: [
               ...prev.popular_artists.artists,
-              ...fetchMoreResult.popular_artists.artists.slice(num, num + 3)
-            }
+              ...(fetchMoreResult.popular_artists.artists.slice(num, num + 3))
+            ]
           }
         }
       },

@@ -63,7 +63,7 @@ export default function UserCard (props: ArtistType) {
         // alert(JSON.stringify({state: "there is error", ...error}, null, 2))
       // }
     // },
-    // awaitRefetchQueries: false,
+    awaitRefetchQueries: false,
     // onCompleted: (data) => {alert(JSON.stringify(data, null, 2))},
     onError: (error: ApolloError) => {alert(JSON.stringify(error, null, 2))}
   })
